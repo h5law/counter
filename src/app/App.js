@@ -1,8 +1,6 @@
-import React from 'react';
+import Counters from '../features/counter/Counters.js';
 
 import './App.css';
-
-import Counters from '../features/counter/Counters.js';
 
 function App() {
   return (
