@@ -27,8 +27,11 @@ const Counters = () => {
   };
 
   return (
-    <div className="counters-container">
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form
+        className="input-form"
+        onSubmit={handleSubmit}
+      >
         <input
           type="text"
           name="new-title"
@@ -39,7 +42,7 @@ const Counters = () => {
         />
         <input type="submit" value="+" />
       </form>
-      <div className="counters-cards">
+      <div className="counters-containers">
         {(store.counters.length > 0) && store.counters.map(obj => (
           <Counter
             key={obj.id}

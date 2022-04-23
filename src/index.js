@@ -6,6 +6,7 @@ import store from './app/store.js';
 import App from './app/App.js';
 
 import './index.css';
+import './reset.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

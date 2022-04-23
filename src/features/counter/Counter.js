@@ -14,30 +14,28 @@ const Counter = ({counter, dispatch}) => {
     dispatch(changeTitle({...counter, title: target.value}));
   };
 
-  const newTitleWidth = {
-    width: `${(counter.title.length + 3) * 12}px`
+  const cardWidth = {
+    width: `${((counter.title.length + 2) * 24)}px`
   };
 
   return (
-    <div className="counter">
+    <div
+      className="counter"
+      style={cardWidth}
+    >
       <div className="counter-top">
-        <div className="counter-title">
-          <input
-            type="text"
-            name="counter-title"
-            value={counter.title}
-            style={newTitleWidth}
-            onChange={handleTitleChange}
-          />
-        </div>
-        <div className="counter-remove">
-          <button
-            aria-label="Remove counter"
-            onClick={() => dispatch(removeCounter(counter))}
-          >
-            &times;
-          </button>
-        </div>
+        <input
+          type="text"
+          name="counter-title"
+          value={counter.title}
+          onChange={handleTitleChange}
+        />
+        <button
+          aria-label="Remove counter"
+          onClick={() => dispatch(removeCounter(counter))}
+        >
+          &times;
+        </button>
       </div>
       <div className="counter-details">
         <button
@@ -55,10 +53,11 @@ const Counter = ({counter, dispatch}) => {
         </button>
       </div>
       <button
-        aria-label="Reset counter"
+        className="counter-reset"
+        aria-label="Reset"
         onClick={() => dispatch(resetCounter(counter))}
       >
-        Reset Counter
+        Reset
       </button>
     </div>
   );
