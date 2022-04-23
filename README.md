@@ -24,7 +24,7 @@ Then run the following:
 ```sh
 $ cd counter
 $ npm install
-$ npm run
+$ npm start
 ```
 
 ## License
