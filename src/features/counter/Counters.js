@@ -11,9 +11,7 @@ const Counters = () => {
 
   const [title, setTitle] = useState('');
   const handleChange = ({target}) => {
-    if (target.value !== '') {
-      setTitle(target.value);
-    }
+    setTitle(target.value);
   };
 
   const handleSubmit = (e) => {
