@@ -6,6 +6,8 @@ you set a name and add the counter to the state which gives it a unique ID.
 After this you can edit the title of the counter, increment, decrement, reset
 the counter and remove the counter from the store all together.
 
+Check out the live site here: [counter](https://superlative-khapse-75d3c0.netlify.app/)
+
 ## Dependencies
 See `package-lock.json` for more details
  - @reduxjs/toolkit: ^1.8.1
